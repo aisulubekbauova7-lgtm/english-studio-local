@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Локальная интерактивная платформа для изучения английского языка">
+  <title>English Studio — изучайте английский</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="English Studio, на главную"><span>ES</span> English Studio</a>
+    <nav aria-label="Основная навигация"><a href="#topics">Темы</a><a href="#mini-tests">Мини‑тесты</a><a href="#how">Как пользоваться</a></nav>
+  </header>
+  <main id="app">
+    <section id="home" class="hero">
+      <div>
+        <p class="eyebrow">Локальная учебная платформа</p>
+        <h1>Английский, который<br><em>становится понятным.</em></h1>
+        <p class="hero-copy">Выберите тему или напишите её название — получите структурированный урок, примеры и упражнения с мгновенной проверкой.</p>
+        <form id="topic-search" class="search" role="search">
+          <label class="sr-only" for="search-input">Найти тему</label>
+          <input id="search-input" autocomplete="off" placeholder="Например: Present Perfect или деловая переписка">
+          <button type="submit">Найти урок <span>→</span></button>
+          <div id="suggestions" class="suggestions" hidden></div>
+        </form>
+        <p class="hint">Доступно <strong id="topic-count">0</strong> тем · Работает без интернета</p>
+      </div>
+      <aside class="hero-card" aria-label="Особенности курса">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <p class="card-kicker">Ваш маршрут</p>
+        <h2>Учитесь в своём темпе</h2>
+        <ul><li><b>01</b> Разберите правило</li><li><b>02</b> Посмотрите примеры</li><li><b>03</b> Закрепите практикой</li></ul>
+      </aside>
+    </section>
+
+    <section id="topics" class="section">
+      <div class="section-heading"><div><p class="eyebrow">Библиотека</p><h2>Все доступные темы</h2></div><div id="filters" class="filters" aria-label="Фильтр тем"></div></div>
+      <div id="topic-grid" class="topic-grid"></div>
+    </section>
+
+    <section id="mini-tests" class="section tests-section">
+      <div class="section-heading"><div><p class="eyebrow">Быстрая практика</p><h2>Мини‑тесты по каждой теме</h2><p>Один вопрос на разогрев. Полный набор упражнений ждёт внутри урока.</p></div></div>
+      <div id="test-grid" class="test-grid"></div>
+    </section>
+
+    <section id="how" class="how section"><p class="eyebrow">Как пользоваться</p><h2>Всё хранится на вашем устройстве</h2><div class="steps"><article><span>1</span><h3>Выберите тему</h3><p>Откройте карточку из каталога или найдите нужное правило через поиск.</p></article><article><span>2</span><h3>Изучите урок</h3><p>Читайте объяснения, таблицы и примеры в удобном пошаговом формате.</p></article><article><span>3</span><h3>Проверьте себя</h3><p>Выполните упражнения и сразу узнайте результат.</p></article></div></section>
+  </main>
+  <footer>English Studio · локальное обучение без аккаунтов, серверов и подписок</footer>
+  <script src="topics/topics.js"></script><script src="js/app.js"></script>
+</body>
+</html>
